@@ -40,6 +40,7 @@
                       placeholder="Cantidad"
                       class="form-control mb-2"
                     />
+                  
                     <button class="btn btn-primary btn-block" type="submit">Agregar</button>
                   </form>
                 </div>

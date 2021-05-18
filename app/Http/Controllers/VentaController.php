@@ -48,7 +48,7 @@ class VentaController extends Controller
         $venta->producto = $request->producto;
         $venta->descripcion = $request->descripcion;
         $venta->precio = $request->precio;
-        $venta->cantidad = $request->cantidad;        
+        $venta->cantidad = $request->cantidad;              
         $venta->usuario = auth()->user()->email;
         $venta->save();
 

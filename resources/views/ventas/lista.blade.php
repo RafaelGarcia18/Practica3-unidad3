@@ -47,31 +47,36 @@
                                         </td>
                                     </tr>                                   
                                     
-                                @endforeach                                
-                      
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td> <b> Total:</b> </td>
+                                @endforeach                       
+                                  
                                    
-                                    <td scope="row"> 
-                                        @php
-                                        $total=0;                                       
-                                        @endphp
-                                
-                                        @foreach ($item as $total)
-                                            @php                                           
-                                            $total =+ $mult;
-                                            @endphp        
-                                         @endforeach
-                                         {{$total}}
-                                    </td>  
-                                                                                   
-                                </tr>
-                             
-
                             </tbody>
+                           <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td> <b> Total:</b> </td>
+                            
+                                <td> 
+                                    @php
+                                    $total=0; 
+                                    @endphp
+                            
+                                    @foreach ($item as $items)
+                                        @php  
+                                        $multi=$item->precio*$item->cantidad;                                         
+                                        $total =+ $mult;                                            
+                                        @endphp        
+                                    @endforeach
+                                    {{$total}}
+                                </td>  
+                                                                           
+                             </tr>                            
+
+                           </tfoot>
+                        
                             
                                
                           

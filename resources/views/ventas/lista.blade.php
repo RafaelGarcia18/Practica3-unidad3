@@ -35,7 +35,7 @@
                                            @php
                                             $mult=0;
                                             @endphp
-                                        <td>
+                                        <td id="col4">
                                         @foreach ($item as $items)
                                             @php
                                             $mult=$item->precio*$item->cantidad;//mulplicamos los valores, ahora solo falta mostrar dicho valor
@@ -56,14 +56,16 @@
                                     @endphp
                                     <td scope="row"> 
                                         @php
-                                        $suma=0;
+                                        $total=0;
+                                        $mul=0;
                                         @endphp
                                         @foreach ($item as $items)
                                             @php
-                                            $suma += $item->subtotal;//sumamos los valores
+                                            $mul=$item->precio*$item->cantidad;
+                                            $total = $mul + $total;
                                             @endphp        
                                          @endforeach
-                                         {{$suma}}
+                                         {{$total}}
                                     </td>                                                            
                                 </tr>
                              

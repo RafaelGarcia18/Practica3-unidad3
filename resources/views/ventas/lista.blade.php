@@ -49,7 +49,7 @@
                                     
                                 @endforeach                                
                       
-                                   <td></td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -59,7 +59,7 @@
                                         @php
                                         $total=0;                                       
                                         @endphp
-                                @foreach ($ventas as $item) 
+                                
                                         @foreach ($item as $total)
                                             @php                                           
                                             $total =+ $mult;
@@ -67,7 +67,7 @@
                                          @endforeach
                                          {{$total}}
                                     </td>  
-                                @endforeach                                                          
+                                                                                   
                                 </tr>
                              
 

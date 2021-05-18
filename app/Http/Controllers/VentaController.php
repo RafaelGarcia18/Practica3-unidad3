@@ -22,7 +22,7 @@ class VentaController extends Controller
     public function index()
     {
         $usuarioEmail = auth()->user()->email;
-        $ventas = Venta::where('usuario', $usuarioEmail)->paginate(5);
+        $ventas = Venta::where('usuario', $usuarioEmail)->paginate(9);
         return view('ventas.lista', compact('ventas'));
     }
 

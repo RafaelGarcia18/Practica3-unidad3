@@ -62,7 +62,7 @@
                                         @foreach ($item as $items)
                                             @php
                                             $mul=$item->precio*$item->cantidad;
-                                            $total = $mul + $total;
+                                            $total += $mul;
                                             @endphp        
                                          @endforeach
                                          {{$total}}

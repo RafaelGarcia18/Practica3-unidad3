@@ -22,7 +22,7 @@ class VentaController extends Controller
     public function index()
     {
         $usuarioEmail = auth()->user()->email;
-        $ventas = Venta::where('usuario', $usuarioEmail)->paginate(10);
+        $ventas = Venta::where('usuario', $usuarioEmail)->paginate(5);
         return view('ventas.lista', compact('ventas'));
     }
 
@@ -48,11 +48,11 @@ class VentaController extends Controller
         $venta->producto = $request->producto;
         $venta->descripcion = $request->descripcion;
         $venta->precio = $request->precio;
-        $venta->cantidad = $request->cantidad;
+        $venta->cantidad = $request->cantidad;        
         $venta->usuario = auth()->user()->email;
         $venta->save();
 
-        return back()->with('mensaje', 'venta Agregada!');
+        return back()->with('mensaje', 'Venta agregada!');
     }
 
     /**

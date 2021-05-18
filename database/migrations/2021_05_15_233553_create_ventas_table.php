@@ -18,7 +18,7 @@ class CreateVentasTable extends Migration
             $table->string('producto');
             $table->text('descripcion');
             $table->decimal('precio', $precision = 8, $scale = 2);
-            $table->integer('cantidad');
+            $table->integer('cantidad');        
             $table->text('usuario');
             $table->timestamps();
         });

@@ -13,6 +13,7 @@
                     <div class="card-body">
                         
                         <table class="table">
+                            
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -20,6 +21,7 @@
                                     <th scope="col">Descripción</th>
                                     <th scope="col">Precio</th>
                                     <th scope="col">Cantidad</th>
+                                    <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,10 +32,48 @@
                                         <td>{{ $item->descripcion }}</td>
                                         <td>{{ $item->precio }}</td>
                                         <td>{{ $item->cantidad }}</td>
-                                    </tr>
-                                @endforeach
+                                           @php
+                                            $mult=0;
+                                            @endphp
+                                        <td>
+                                        @foreach ($item as $items)
+                                            @php
+                                            $mult=$item->precio*$item->cantidad;//mulplicamos los valores, ahora solo falta mostrar dicho valor
+                                            @endphp        
+                                         @endforeach
+                                         {{$mult}}
+                                        </td>
+                                    </tr>                                   
+                                    
+                                @endforeach                                
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td> <b> Total:</b> </td>
+                                    @php
+                                    $sum=0;
+                                    @endphp
+                                    <td scope="row"> 
+                                        @php
+                                        $suma=0;
+                                        @endphp
+                                        @foreach ($item as $items)
+                                            @php
+                                            $suma += $item->subtotal;//sumamos los valores
+                                            @endphp        
+                                         @endforeach
+                                         {{$suma}}
+                                    </td>                                                            
+                                </tr>
+                             
+
                             </tbody>
-                        </table>
+                            
+                               
+                          
+                            
+                        </table>                        
                         {{ $ventas->links() }}
                         {{-- fin card body --}}
                     </div>

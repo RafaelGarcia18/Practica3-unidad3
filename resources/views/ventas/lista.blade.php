@@ -47,4 +47,7 @@
                 </div>
             </div>
         </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-4 mb-lg-3 mt-3">
+            <a href="/" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Volver al inicio</a>
+        </div>
     @endsection

@@ -22,8 +22,13 @@ class VentaController extends Controller
     public function index()
     {
         $usuarioEmail = auth()->user()->email;
-        $ventas = Venta::where('usuario', $usuarioEmail)->paginate(9);
-        return view('ventas.lista', compact('ventas'));
+        $ventas = Venta::where('usuario', $usuarioEmail)->paginate(5);
+        $registrosUsuario = Venta::query()->select(['cantidad', 'precio']) -> where('usuario', $usuarioEmail)->get();
+        $totalr=0;
+        foreach ($registrosUsuario as $registro ) {
+            $totalr += $registro->precio * $registro->cantidad;
+        }
+        return view('ventas.lista', compact('ventas','totalr'));
     }
 
     /**

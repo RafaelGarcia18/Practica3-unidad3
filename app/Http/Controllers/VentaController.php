@@ -59,7 +59,7 @@ class VentaController extends Controller
 
         return back()->with('mensaje', 'Venta agregada!');
     }
-
+  
     /**
      * Display the specified resource.
      *
@@ -79,7 +79,11 @@ class VentaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $venta = new Venta();
+        $venta->usuario = auth()->user()->email;
+        $venta = Venta::findOrFail($id);
+        return view('ventas.edit', compact('venta'));
+     
     }
 
     /**
@@ -91,7 +95,13 @@ class VentaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $venta = new Venta();
+        $datosVenta= request()->except(['_token','_method']);
+        Venta::where('id' , '=',$id)->update($datosVenta);
+        $venta = Venta::findOrFail($id);
+        return back()->with('mensaje', 'Venta Editada exitosamente!');
+        return view('ventas.edit', compact('venta'));
+
     }
 
     /**
@@ -102,6 +112,10 @@ class VentaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $venta = new Venta();
+        $venta->usuario = auth()->user()->email;
+        $venta = Venta::find($id);
+        $venta->delete();
+        return back()->with('mensaje', 'Venta Eliminada!');
     }
 }

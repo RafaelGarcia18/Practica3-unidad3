@@ -13,7 +13,7 @@
                         @if ( session('mensaje') )
                     <div class="alert alert-success">{{ session('mensaje') }}</div>
                   @endif
-                        <table class="table table-bordered">
+                        <table class="table table-bordered table-hover">
 
                             <thead class="table-dark">
                                 <tr>
@@ -37,7 +37,7 @@
                                         <td> ${{ $item->precio * $item->cantidad }}</td>
                                         <td>
                                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                             <form action="{{ url('/ventas/'.$item->id) }}" method="post">
+                                             <form action="{{ url('/ventas/'.$item->id) }}" method="post" style="inline">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button class="btn btn-danger me-md-2" type="submit" onclick="return confirm('¿Borrar?');">Eliminar</button>

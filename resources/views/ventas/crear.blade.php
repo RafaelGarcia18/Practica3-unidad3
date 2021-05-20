@@ -6,8 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <span>Agregar venta</span>
-                    <a href="/ventas" class="btn btn-primary btn-sm">Volver a lista de ventas...</a>
+                    <span>Agregar venta: </span>
+                    <a href="/ventas" class="btn btn-warning btn-sm">Volver a lista de ventas...</a>
                 </div>
                 <div class="card-body">     
                   @if ( session('mensaje') )
@@ -20,7 +20,8 @@
                       name="producto"
                       placeholder="Producto"
                       class="form-control mb-2"
-                    />
+                   />          
+                       
                     <input
                       type="text"
                       name="descripcion"

@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span>Editar datos de la venta </span>
-                    <a href="/ventas" class="btn btn-primary btn-sm">Volver a lista de ventas...</a>
+                    <a href="/ventas" class="btn btn-warning btn-sm">Volver a lista de ventas...</a>
                 </div>
                 <div class="card-body">     
                   @if ( session('mensaje') )

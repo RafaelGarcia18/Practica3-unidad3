@@ -33,8 +33,8 @@
                                         <td>{{ $item->producto }}</td>
                                         <td>{{ $item->descripcion }}</td>
                                         <td>{{ $item->cantidad }}</td>
-                                        <td>{{ $item->precio }}</td>
-                                        <td>{{ $item->precio * $item->cantidad }}</td>
+                                        <td> ${{ $item->precio }}</td>
+                                        <td> ${{ $item->precio * $item->cantidad }}</td>
                                         <td>
                                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                              <form action="{{ url('/ventas/'.$item->id) }}" method="post">

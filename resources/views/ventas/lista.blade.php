@@ -40,7 +40,7 @@
                                              <form action="{{ url('/ventas/'.$item->id) }}" method="post" style="inline">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
-                                            <button class="btn btn-danger me-md-2" type="submit" onclick="return confirm('¿Borrar?');">Eliminar</button>
+                                            <button class="btn btn-danger me-md-2 mr-2" type="submit" onclick="return confirm('¿Borrar?');">Eliminar</button>
                                             </form>
                                             <a class="btn btn-warning" href="{{ url('/ventas/'.$item->id).'/edit'}}">Editar</a>                                                                                 
                                            </div>                                                                              

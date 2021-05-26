@@ -13,7 +13,7 @@
 - MariaDB
 
 ## Pasos antes compilar el proyecto
-- Crear una base de datos bacia en mariadb
+- Crear una base de datos vacia en mariadb
 - crear un archivo llamado .env en la raiz del proyecto siguiendo el ejemplo de .env.example
 - reemplazar los valores siguientes
 	- DB_DATABASE=**{{Nombre de la base de datos}}**

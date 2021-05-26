@@ -33,6 +33,6 @@ Los siguientes pasos deben ser ejecutados desde la consola apuntando a la ruta r
 
 ### Integrantes del equipo
 
-- **Natalia Sofia Martinez Lima - [ML17002](mailto:ml17002@ues.edu.sv.com)**
-- **Rafael Edgardo Garcia Estrada - [GE17001](mailto:ge17001@ues.edu.sv.com)**
-- **Mario Edgardo Vanegas Cardoza - [VC17018](mailto:vc17018@ues.edu.sv.com)**
+- **Natalia Sofia Martinez Lima - [ML17002](mailto:ml17002@ues.edu.sv)**
+- **Rafael Edgardo Garcia Estrada - [GE17001](mailto:ge17001@ues.edu.sv)**
+- **Mario Edgardo Vanegas Cardoza - [VC17018](mailto:vc17018@ues.edu.sv)**
